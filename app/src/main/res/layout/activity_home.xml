@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HomeActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Select your type of service"
+        android:textSize="50dp"
+        android:textAlignment="center"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/dm_service_btn"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:text="Dungeon Master"
+            android:textSize="80dp"
+            app:cornerRadius="30dp"
+            android:layout_marginBottom="50dp"/>
+
+        <Button
+            android:id="@+id/player_service_btn"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:text="Player"
+            android:textSize="80dp"
+            app:cornerRadius="30dp"/>
+    </LinearLayout>
+</LinearLayout>
