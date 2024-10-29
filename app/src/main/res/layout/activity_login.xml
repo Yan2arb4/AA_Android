@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/aa_logo"/>
+
+    <EditText
+        android:id="@+id/username_input"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:inputType="text"
+        android:textSize="20sp"
+        android:layout_marginTop="60dp"
+        android:padding="18dp"
+        android:background="@drawable/rounded_corner"/>
+
+    <EditText
+        android:id="@+id/password_input"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="text"
+        android:textSize="20sp"
+        android:layout_marginTop="32dp"
+        android:padding="18dp"
+        android:background="@drawable/rounded_corner"/>
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:padding="18dp"
+        android:text="LOGIN"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:backgroundTint="#2C2C2C"
+        app:cornerRadius="24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't have an account?"
+        android:textSize="18sp"
+        android:clickable="true"
+        android:textColor="#5F5FFA"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>
