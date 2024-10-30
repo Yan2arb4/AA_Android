@@ -34,23 +34,34 @@
         android:padding="18dp"
         android:background="@drawable/rounded_corner"/>
 
+    <EditText
+        android:id="@+id/password_confirm_input"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:hint="Confirm Password"
+        android:inputType="text"
+        android:textSize="20sp"
+        android:layout_marginTop="32dp"
+        android:padding="18dp"
+        android:background="@drawable/rounded_corner"/>
+
     <Button
-        android:id="@+id/login_btn"
+        android:id="@+id/signin_btn"
         android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:padding="18dp"
-        android:text="LOGIN"
+        android:text="CREATE ACCOUNT"
         android:textSize="20sp"
         android:textColor="@color/white"
         android:backgroundTint="#2C2C2C"
         app:cornerRadius="24dp" />
 
     <TextView
-        android:id="@+id/signin_option"
+        android:id="@+id/login_option"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Don't have an account?"
+        android:text="Have an account?"
         android:textSize="18sp"
         android:clickable="true"
         android:textColor="@color/black"

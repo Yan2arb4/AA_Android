@@ -23,6 +23,7 @@
         <activity android:name=".DmActivity"/>
         <activity android:name=".PlayerActivity"/>
         <activity android:name=".ProfileActivity"/>
+        <activity android:name=".SignInActivity"/>
     </application>
 
 </manifest>

@@ -5,15 +5,16 @@ import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.view.WindowInsets
+import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
-import com.porogoramer.adventure_assistant.databinding.ActivityLoginBinding
+import com.porogoramer.adventure_assistant.databinding.ActivitySigninBinding
 
-class LogInActivitity : AppCompatActivity() {
-    private lateinit var binding: ActivityLoginBinding
+class SignInActivity : AppCompatActivity() {
+    private lateinit var binding : ActivitySigninBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityLoginBinding.inflate(layoutInflater)
+        binding = ActivitySigninBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         //Hide status bar
@@ -24,12 +25,12 @@ class LogInActivitity : AppCompatActivity() {
             window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
         }
 
-        binding.loginBtn.setOnClickListener {
+        binding.signinBtn.setOnClickListener {
             startActivity(Intent(this, HomeActivity::class.java))
         }
 
-        binding.signinOption.setOnClickListener {
-            startActivity(Intent(this, SignInActivity::class.java))
+        binding.loginOption.setOnClickListener {
+            startActivity(Intent(this, LogInActivitity::class.java))
         }
     }
 }
