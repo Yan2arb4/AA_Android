@@ -5,13 +5,12 @@ import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.view.WindowInsets
-import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
-import com.porogoramer.adventure_assistant.HomeActivity
+import com.porogoramer.adventure_assistant.connexion.LogInActivitity
 import com.porogoramer.adventure_assistant.ProfileActivity
 import com.porogoramer.adventure_assistant.R
 
@@ -22,14 +21,7 @@ abstract class BaseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_base)
-
-        //Hide status bar
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            window.insetsController?.hide(WindowInsets.Type.statusBars())
-        } else {
-            @Suppress("DEPRECATION")
-            window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
-        }
+        this.hideStatusBar()
 
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
@@ -49,12 +41,21 @@ abstract class BaseActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
                 R.id.nav_disconnect -> {
-                    val intent = Intent(this, HomeActivity::class.java)
+                    val intent = Intent(this, LogInActivitity::class.java)
                     startActivity(intent)
                 }
             }
             drawerLayout.closeDrawers()
             true
+        }
+    }
+
+    fun hideStatusBar() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            window.insetsController?.hide(WindowInsets.Type.statusBars())
+        } else {
+            @Suppress("DEPRECATION")
+            window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
         }
     }
 }

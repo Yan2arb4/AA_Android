@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Adventure_Assistant"
         tools:targetApi="31">
-        <activity android:name=".LogInActivitity" android:exported="true">
+        <activity android:name=".connexion.LogInActivitity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,9 +21,9 @@
         </activity>
         <activity android:name=".HomeActivity"/>
         <activity android:name=".DmActivity"/>
-        <activity android:name=".PlayerActivity"/>
+        <activity android:name=".player.PlayersActivity"/>
         <activity android:name=".ProfileActivity"/>
-        <activity android:name=".SignInActivity"/>
+        <activity android:name=".connexion.SignInActivity"/>
     </application>
 
 </manifest>
