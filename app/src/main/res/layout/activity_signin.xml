@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:background="@drawable/old_paper_background">
+    android:background="@drawable/img_background_old_paper">
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/aa_logo"/>
+        android:src="@drawable/logo_aa"/>
 
     <EditText
         android:id="@+id/username_input"
