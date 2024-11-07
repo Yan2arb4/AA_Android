@@ -41,15 +41,4 @@
         android:backgroundTint="@color/black"
         />
 
-    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-        android:id="@+id/temp_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|start"
-        android:layout_margin="18dp"
-        android:text="Access other page"
-        android:textColor="@color/white"
-        android:backgroundTint="@color/black"
-        />
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
