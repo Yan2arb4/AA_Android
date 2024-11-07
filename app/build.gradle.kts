@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "com.porogoramer.adventure_assistant"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -40,7 +40,8 @@ android {
 }
 
 dependencies {
-    implementation ("com.google.android.material:material:1.4.0")
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
+    implementation ("com.google.android.material:material:1.9.0")
     implementation ("androidx.navigation:navigation-fragment:2.3.5")
     implementation ("androidx.navigation:navigation-ui:2.3.5")
     implementation(libs.androidx.core.ktx)
