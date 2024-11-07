@@ -6,6 +6,6 @@ import com.porogoramer.adventure_assistant.common.BaseActivity
 class ProfileActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        layoutInflater.inflate(R.layout.content_profile, findViewById(R.id.content_frame), true)
+        layoutInflater.inflate(R.layout.content_player_profile, findViewById(R.id.content_frame), true)
     }
 }
