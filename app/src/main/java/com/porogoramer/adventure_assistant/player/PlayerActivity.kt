@@ -11,5 +11,6 @@ class PlayerActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         binding = ContentPlayerProfileBinding.inflate(layoutInflater)
         layoutInflater.inflate(R.layout.content_player_profile, findViewById(R.id.content_frame), true)
+        setTitle("{{Character.name}}")
     }
 }

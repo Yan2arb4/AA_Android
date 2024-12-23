@@ -34,10 +34,6 @@ class PlayersActivity : AppCompatActivity() {
         this.hideStatusBar()
         this.initRecycler()
         this.fillRecycler()
-
-        binding.tempBtn.setOnClickListener {
-            startActivity(Intent(this, ProfileActivity::class.java))
-        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
