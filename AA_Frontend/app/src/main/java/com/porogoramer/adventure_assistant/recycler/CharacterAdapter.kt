@@ -1,7 +1,6 @@
 package com.porogoramer.adventure_assistant.recycler
 
 import android.content.Intent
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,7 +8,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.porogoramer.adventure_assistant.R
-import com.porogoramer.adventure_assistant.player.PlayerActivity
+import com.porogoramer.adventure_assistant.activities.player.PlayerActivity
 
 /*mList only processes strings for now. Change to proper class once working on API*/
 class CharacterAdapter : RecyclerView.Adapter<CharacterAdapter.ViewHolder>() {

@@ -1,18 +1,18 @@
-package com.porogoramer.adventure_assistant
+package com.porogoramer.adventure_assistant.activities
 
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.view.WindowInsets
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import com.porogoramer.adventure_assistant.connexion.LogInActivitity
+import com.porogoramer.adventure_assistant.R
+import com.porogoramer.adventure_assistant.activities.connexion.LogInActivitity
 import com.porogoramer.adventure_assistant.databinding.ActivityHomeBinding
-import com.porogoramer.adventure_assistant.player.PlayersActivity
+import com.porogoramer.adventure_assistant.activities.player.PlayersActivity
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding

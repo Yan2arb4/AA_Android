@@ -1,6 +1,7 @@
-package com.porogoramer.adventure_assistant
+package com.porogoramer.adventure_assistant.activities
 
 import android.os.Bundle
+import com.porogoramer.adventure_assistant.R
 import com.porogoramer.adventure_assistant.common.BaseActivity
 import com.porogoramer.adventure_assistant.databinding.ContentDmBinding
 

@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Adventure_Assistant"
+rootProject.name = "AA_Frontend"
 include(":app")
  

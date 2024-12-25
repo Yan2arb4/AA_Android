@@ -1,4 +1,4 @@
-package com.porogoramer.adventure_assistant.connexion
+package com.porogoramer.adventure_assistant.activities.connexion
 
 import android.content.Intent
 import android.os.Build
@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.view.WindowInsets
 import androidx.appcompat.app.AppCompatActivity
-import com.porogoramer.adventure_assistant.HomeActivity
+import com.porogoramer.adventure_assistant.activities.HomeActivity
 import com.porogoramer.adventure_assistant.databinding.ActivityLoginBinding
 
 class LogInActivitity : AppCompatActivity() {

@@ -10,9 +10,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
-import com.porogoramer.adventure_assistant.connexion.LogInActivitity
-import com.porogoramer.adventure_assistant.ProfileActivity
+import com.porogoramer.adventure_assistant.activities.connexion.LogInActivitity
 import com.porogoramer.adventure_assistant.R
+import com.porogoramer.adventure_assistant.activities.ProfileActivity
 
 abstract class BaseActivity : AppCompatActivity() {
     protected lateinit var  drawerLayout: DrawerLayout
