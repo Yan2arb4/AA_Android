@@ -40,8 +40,19 @@ android {
 }
 
 dependencies {
+
+    //Recycler
     implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation ("com.google.android.material:material:1.9.0")
+
+    // https://mvnrepository.com/artifact/com.squareup.retrofit2/retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    // https://mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+    // https://mvnrepository.com/artifact/com.squareup.retrofit2/converter-scalars
+    implementation("com.squareup.retrofit2:converter-scalars:2.11.0")
+
+
     implementation ("androidx.navigation:navigation-fragment:2.3.5")
     implementation ("androidx.navigation:navigation-ui:2.3.5")
     implementation(libs.androidx.core.ktx)
