@@ -3,7 +3,11 @@ using Microsoft.Extensions.DependencyInjection;
 using AA_Backend.Data;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<AA_BackendContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("AA_BackendContext") ?? throw new InvalidOperationException("Connection string 'AA_BackendContext' not found.")));
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("AA_BackendContext") ?? throw new InvalidOperationException("Connection string 'AA_BackendContext' not found."));
+    options.UseLazyLoadingProxies();
+});
+    
 
 // Add services to the container.
 
