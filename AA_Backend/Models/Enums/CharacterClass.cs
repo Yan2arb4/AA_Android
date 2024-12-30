@@ -1,6 +1,6 @@
 ﻿namespace AA_Backend.Models.Enums
 {
-    public enum Class
+    public enum CharacterClass
     {
         Barbarian,
         Bard,
