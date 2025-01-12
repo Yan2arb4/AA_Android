@@ -475,3 +475,14 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+appsettings.json
+
+#exclude everything
+Migrations/*
+
+#exception
+!Migrations/.gitkeep
+
+
+

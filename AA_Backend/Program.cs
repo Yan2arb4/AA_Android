@@ -1,8 +1,11 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using AA_Backend.Data;
 using AA_Backend.Models;
 using Microsoft.AspNetCore.Identity;
+using AA_Backend.Configuration;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<AA_BackendContext>(options =>
 {
@@ -10,8 +13,41 @@ builder.Services.AddDbContext<AA_BackendContext>(options =>
     options.UseLazyLoadingProxies();
 });
 
+//Equivalent of .env supposedly
+var secretkey = builder.Configuration.GetSection("JwtSettings:SecretKey");
+
 builder.Services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<AA_BackendContext>();
-    
+builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(options =>
+{
+    options.SaveToken = true;
+    options.RequireHttpsMetadata = false;   //Development purposes
+    options.TokenValidationParameters = new TokenValidationParameters()
+    {
+        ValidateAudience = true,
+        ValidateIssuer = true,
+        ValidAudience = "https://localhost:8000",
+        ValidIssuer = "https://localhost:7107",
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretkey.Value!))
+    };
+});
+
+//Password complexity
+//Set to very easy for production purposes
+builder.Services.Configure<IdentityOptions>(options =>
+{
+    options.Password.RequireDigit = false;
+    options.Password.RequiredLength = 3;
+    options.Password.RequireLowercase = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequireNonAlphanumeric = false;
+});
 
 // Add services to the container.
 
