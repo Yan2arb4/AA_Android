@@ -10,9 +10,9 @@ import java.security.Provider.Service
 
 
 open class RetrofitUtil {
-    private var instance : Service? = null
+    private var instance : AdventureService? = null
 
-     open fun get(): Service? {
+     open fun get(): AdventureService? {
         if(instance == null){
             val retrofit: Retrofit = Retrofit.Builder()
                 .addConverterFactory(ScalarsConverterFactory.create())
@@ -20,7 +20,7 @@ open class RetrofitUtil {
                 .client(client())
                 .baseUrl("https://localhost:7107/api/")
                 .build()
-            instance = retrofit.create(Service::class.java)
+            instance = retrofit.create(AdventureService::class.java)
             return instance
         }else{
             return instance
