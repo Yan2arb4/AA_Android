@@ -1,15 +1,16 @@
 package com.porogoramer.adventure_assistant.http
 
-import com.porogoramer.adventure_assistant.http.dto.SignInRequest
-import com.porogoramer.adventure_assistant.http.dto.SignInResponse
+import com.porogoramer.adventure_assistant.http.dto.LoginRequest
+import com.porogoramer.adventure_assistant.http.dto.LoginResponse
+import com.porogoramer.adventure_assistant.http.dto.RegisterRequest
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.POST
 
 interface AdventureService {
     @POST("Users/Register")
-    fun signUp(@Body signInRequest: SignInRequest): Call<SignInResponse>
+    fun register(@Body registerRequest: RegisterRequest): Call<LoginResponse>
 
     @POST("Users/Login")
-    fun signIn(@Body signInRequest: SignInRequest): Call<SignInResponse>
+    fun Login(@Body loginRequest: LoginRequest): Call<LoginResponse>
 }

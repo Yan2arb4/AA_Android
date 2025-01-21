@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using AA_Backend.Data;
 using AA_Backend.Models;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace AA_Backend.Controllers
 {
@@ -25,7 +26,7 @@ namespace AA_Backend.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Character>>> GetCharacter()
         {
-            return await _context.Character.ToListAsync();
+            return Ok(new { Message = "I exist" });
         }
 
         // GET: api/Characters/5
