@@ -19,7 +19,7 @@ namespace AA_Backend.Controllers
     public class UsersController : ControllerBase
     {
         readonly UserManager<User> _userManager;
-        readonly string _secretKey;
+        readonly string? _secretKey;
 
         public UsersController(UserManager<User> userManager, IOptions<JwtSettings> jwtSettings)
         {
@@ -67,12 +67,12 @@ namespace AA_Backend.Controllers
                 authClaims.Add(new Claim(ClaimTypes.Role, role));
             authClaims.Add(new Claim(ClaimTypes.NameIdentifier, user.Id));
 
-            SymmetricSecurityKey key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_secretKey));
+            SymmetricSecurityKey key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_secretKey!));
             JwtSecurityToken token = new JwtSecurityToken(
                 issuer: "https://localhost:7107",       //Server
                 audience: "https://localhost:8000",     //Client
                 claims: authClaims,
-                expires: DateTime.Now.AddHours(1),
+                expires: DateTime.Now.AddHours(10),
                 signingCredentials: new SigningCredentials(key, SecurityAlgorithms.HmacSha256Signature)
                 );
 
