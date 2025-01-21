@@ -51,6 +51,8 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.11.0")
     // https://mvnrepository.com/artifact/com.squareup.retrofit2/converter-scalars
     implementation("com.squareup.retrofit2:converter-scalars:2.11.0")
+    // https://mvnrepository.com/artifact/com.squareup.okhttp3/logging-interceptor
+    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
 
 
     implementation ("androidx.navigation:navigation-fragment:2.3.5")

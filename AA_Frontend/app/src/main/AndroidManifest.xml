@@ -14,17 +14,17 @@
         android:theme="@style/Theme.Adventure_Assistant"
         tools:targetApi="31">
         <activity android:name=".activities.connexion.LogInActivitity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".activities.HomeActivity"/>
         <activity android:name=".activities.DmActivity"/>
         <activity android:name=".activities.player.PlayersActivity"/>
         <activity android:name=".activities.player.PlayerActivity"/>
         <activity android:name=".activities.ProfileActivity" android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".activities.connexion.SignInActivity"/>
     </application>
