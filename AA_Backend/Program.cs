@@ -9,8 +9,8 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<AA_BackendContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("AA_BackendContext") ?? throw new InvalidOperationException("Connection string 'AA_BackendContext' not found."));
-    options.UseLazyLoadingProxies();
+    var connectionString = builder.Configuration.GetConnectionString("AA_BackendContext_Mysql");
+    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
 });
 
 //Equivalent of .env supposedly
