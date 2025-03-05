@@ -1,12 +1,17 @@
 package com.porogoramer.adventure_assistant
 
-import androidx.test.platform.app.InstrumentationRegistry
+import android.util.Log
 import androidx.test.ext.junit.runners.AndroidJUnit4
-
+import com.porogoramer.adventure_assistant.http.AdventureService
+import com.porogoramer.adventure_assistant.http.RetrofitUtil
+import com.porogoramer.adventure_assistant.http.dto.LoginResponse
+import com.porogoramer.adventure_assistant.http.dto.RegisterRequest
+import org.junit.Assert.*
 import org.junit.Test
 import org.junit.runner.RunWith
-
-import org.junit.Assert.*
+import retrofit2.Call
+import retrofit2.Response
+import java.io.IOException
 
 /**
  * Instrumented test, which will execute on an Android device.
@@ -15,10 +20,13 @@ import org.junit.Assert.*
  */
 @RunWith(AndroidJUnit4::class)
 class ExampleInstrumentedTest {
+    var service: AdventureService? = RetrofitUtil().get()
+    var testSU: RegisterRequest = RegisterRequest("yan", "yan", "yan")
+
     @Test
-    fun useAppContext() {
-        // Context of the app under test.
-        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.porogoramer.adventure_assistant", appContext.packageName)
+    fun testSignUp() {
+        val call: Call<String>? = service?.register(testSU)
+        val response: Response<String>? = call?.execute()
+        Log.i("RETROFIT", response?.body().toString())
     }
 }
